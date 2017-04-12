@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="primary" align-title="center">
+    <ion-title center-text>
+      Ventas
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+  <ion-item *ngFor="let item of listventas">
+    <ion-icon name="cart" item-left></ion-icon>
+      {{item.product}}
+    <button ion-button clear item-right>View</button>
+  </ion-item>
+</ion-list>
+
+</ion-content>
+

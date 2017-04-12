@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar color="primary" hideBackButton="true">
+        <ion-title center-text>
+            Inicio
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+    <ion-card [navPush]="ventas">
+        <img src="assets/11.jpg" />
+        <div class="card-title">Ventas</div>
+        <div class="card-subtitle">{{sales_count}} ventas</div>
+    </ion-card>
+
+    <ion-card [navPush]="services">
+        <img src="assets/12.jpg" />
+        <div class="card-title">Servicios</div>
+        <div class="card-subtitle">{{services_count}} servicios</div>
+    </ion-card>
+
+    <ion-card>
+        <img src="assets/10.jpg" />
+        <div class="card-title">Caja</div>
+        <div class="card-subtitle">72 en caja</div>
+    </ion-card>
+
+    <ion-card>
+        <img src="assets/13.jpg" />
+        <div class="card-title">Informes</div>
+        <div class="card-subtitle">Infomes generales</div>
+    </ion-card>
+
+</ion-content>
