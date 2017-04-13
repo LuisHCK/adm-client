@@ -17,6 +17,7 @@ export class HomePage {
   
   sales_count: any;
   services_count: any;
+  cash_total: any;
 
   constructor(public navCtrl: NavController, private httpProvider:HttpProvider, public loadingCtl: LoadingController, public storage: Storage) {
     this.storage.get('token').then(token=>{
@@ -30,6 +31,7 @@ export class HomePage {
     result => {
       this.sales_count=result.sales;
       this.services_count=result.services;
+      this.cash_total = result.cash
       console.log("Success : ");
     },
     err =>{

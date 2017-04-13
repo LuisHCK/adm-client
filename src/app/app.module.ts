@@ -11,6 +11,7 @@ import { HomePage } from '../pages/home/home';
 import { Ventas } from '../pages/ventas/ventas';
 import { Login } from '../pages/login/login';
 import { Services } from '../pages/services/services';
+import { SaleDetails } from '../pages/sale-details/sale-details';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { Services } from '../pages/services/services';
     HomePage,
     Ventas,
     Login,
-    Services
+    Services,
+    SaleDetails
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { Services } from '../pages/services/services';
     HomePage,
     Ventas,
     Login,
-    Services
+    Services,
+    SaleDetails
   ],
   providers: [
     StatusBar,

@@ -25,7 +25,8 @@ export class Services {
 
   listServices(token){
     console.log("token ventas:" + token)
-    this.httpProvider.getData(token, 'sales').subscribe(
+    //Call the provider
+    this.httpProvider.getData(token, 'services').subscribe(
     result => {
       this.Listervices=result;
       console.log("Success : "+this.Listervices);

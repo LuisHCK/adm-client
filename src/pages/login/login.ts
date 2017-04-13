@@ -33,7 +33,7 @@ export class Login {
         this.TestToken(token);
         this.toastMsg("Cargando Sesión")
       });
-    });;
+    });
   }
 
   ionViewDidLoad() {

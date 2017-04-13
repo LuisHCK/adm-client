@@ -3,6 +3,8 @@ import { NavController, LoadingController } from 'ionic-angular';
 import {HttpProvider} from '../../providers/http-provider';
 import { Storage } from '@ionic/storage';
 
+import { SaleDetails } from '../sale-details/sale-details';
+
 /**
  * Generated class for the Ventas page.
  *
@@ -24,12 +26,13 @@ export class Ventas {
     })
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Ventas');
+  saleDetails(id){
+    this.navCtrl.push(SaleDetails,{
+      param_id: id
+    });
   }
 
   listSales(token){
-    console.log("token ventas:" + token)
   this.httpProvider.getData(token, 'sales').subscribe(
     result => {
       this.listventas=result;

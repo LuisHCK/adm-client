@@ -6,14 +6,19 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-list>
-  <ion-item *ngFor="let item of listventas">
-    <ion-icon name="cart" item-left></ion-icon>
-      {{item.product}}
-    <button ion-button clear item-right>View</button>
+<ion-content>
+
+<ion-list>
+  <ion-item ion-item *ngFor="let item of listventas">
+    <h2>{{item.product}}</h2>
+    <p>
+      <strong>Vendedor: </strong>{{item.seller}} <br> 
+      <strong>Total: </strong> ${{item.price * item.quantity}}
+    </p>
+    <button ion-button clear item-right (click)="saleDetails(item.id)">Ver</button>
   </ion-item>
 </ion-list>
+
 
 </ion-content>
 
