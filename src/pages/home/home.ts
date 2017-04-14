@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController } from 'ionic-angular';
 import {HttpProvider} from '../../providers/http-provider';
+import { Storage } from '@ionic/storage';
+
 import { Ventas } from '../ventas/ventas';
 import { Services } from '../services/services';
-import { Storage } from '@ionic/storage';
 
 
 @Component({
