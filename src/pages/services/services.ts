@@ -19,8 +19,13 @@ export class Services {
     })
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Services');
+  noItems(item) {
+    if (item){
+      return false
+    }
+    else{
+      return true
+    }
   }
 
   listServices(token){
