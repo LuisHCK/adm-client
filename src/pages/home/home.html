@@ -20,7 +20,7 @@
         <div class="card-subtitle">{{services_count}} servicios</div>
     </ion-card>
 
-    <ion-card>
+    <ion-card [navPush]="cash">
         <img src="assets/10.jpg" />
         <div class="card-title">Caja</div>
         <div class="card-subtitle">${{cash_total}} en caja</div>

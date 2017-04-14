@@ -5,6 +5,7 @@ import { Storage } from '@ionic/storage';
 
 import { Ventas } from '../ventas/ventas';
 import { Services } from '../services/services';
+import { Cash } from '../cash/cash';
 
 
 @Component({
@@ -15,6 +16,7 @@ import { Services } from '../services/services';
 export class HomePage {
   ventas = Ventas;
   services = Services;
+  cash = Cash;
   
   sales_count: any;
   services_count: any;
