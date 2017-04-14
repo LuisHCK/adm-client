@@ -12,6 +12,7 @@ import { Ventas } from '../pages/ventas/ventas';
 import { Login } from '../pages/login/login';
 import { Services } from '../pages/services/services';
 import { SaleDetails } from '../pages/sale-details/sale-details';
+import { Cash } from '../pages/cash/cash';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { SaleDetails } from '../pages/sale-details/sale-details';
     Ventas,
     Login,
     Services,
-    SaleDetails
+    SaleDetails,
+    Cash
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { SaleDetails } from '../pages/sale-details/sale-details';
     Ventas,
     Login,
     Services,
-    SaleDetails
+    SaleDetails,
+    Cash
   ],
   providers: [
     StatusBar,
