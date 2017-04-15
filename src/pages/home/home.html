@@ -1,35 +1,49 @@
 <ion-header>
-    <ion-navbar color="primary" hideBackButton="true">
-        <ion-title center-text>
-            Inicio
-        </ion-title>
-    </ion-navbar>
+  <ion-navbar color="primary" hideBackButton="true">
+    <ion-title center-text>
+      Inicio
+    </ion-title>
+  </ion-navbar>
 </ion-header>
 
 <ion-content class="card-background-page">
 
-    <ion-card [navPush]="ventas">
+  <ion-grid>
+    <ion-row>
+
+      <ion-col col-6>
+        <ion-card [navPush]="cash">
+          <img src="assets/10.jpg" />
+          <div class="card-title">Caja</div>
+          <div class="card-subtitle">${{cash_total}} en caja</div>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-6>
+      <ion-card [navPush]="ventas">
         <img src="assets/11.jpg" />
         <div class="card-title">Ventas</div>
         <div class="card-subtitle">{{sales_count}} ventas</div>
-    </ion-card>
+      </ion-card>
+      </ion-col>
 
-    <ion-card [navPush]="services">
-        <img src="assets/12.jpg" />
-        <div class="card-title">Servicios</div>
-        <div class="card-subtitle">{{services_count}} servicios</div>
-    </ion-card>
+      <ion-col col-6>
+        <ion-card [navPush]="services">
+          <img src="assets/12.jpg" />
+          <div class="card-title">Servicios</div>
+          <div class="card-subtitle">{{services_count}} servicios</div>
+        </ion-card>
+      </ion-col>
 
-    <ion-card [navPush]="cash">
-        <img src="assets/10.jpg" />
-        <div class="card-title">Caja</div>
-        <div class="card-subtitle">${{cash_total}} en caja</div>
-    </ion-card>
+      <ion-col col-6>
+        <ion-card>
+          <img src="assets/13.jpg" />
+          <div class="card-title">Informes</div>
+          <div class="card-subtitle">Infomes generales</div>
+        </ion-card>
+      </ion-col>
 
-    <ion-card>
-        <img src="assets/13.jpg" />
-        <div class="card-title">Informes</div>
-        <div class="card-subtitle">Infomes generales</div>
-    </ion-card>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>
