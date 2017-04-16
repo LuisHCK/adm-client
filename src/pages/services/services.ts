@@ -11,7 +11,8 @@ import { Storage } from '@ionic/storage';
 })
 export class Services {
 
-  Listervices:any
+  Listervices:any;
+  token:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private httpProvider:HttpProvider, public storage: Storage) {
     this.storage.get('token').then(token=>{
@@ -28,6 +29,17 @@ export class Services {
     }
   }
 
+  doRefresh(refresher) {
+    this.httpProvider.getData(this.token, 'services').subscribe(
+      result => {
+        this.Listervices = result;
+        if (refresher != 0) {
+          refresher.complete();
+        }
+      }
+    );
+  };
+
   listServices(token){
     console.log("token ventas:" + token)
     //Call the provider
@@ -42,5 +54,6 @@ export class Services {
     () => {
       console.log('getData completed');
     });
+    this.token = token;
   }
 }
