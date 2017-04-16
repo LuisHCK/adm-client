@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController} from 'ionic-angular';
+import { NavController, NavParams, ToastController} from 'ionic-angular';
 import {HttpProvider} from '../../providers/http-provider';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import { Storage } from '@ionic/storage';
 
 import { HomePage } from '../home/home'
