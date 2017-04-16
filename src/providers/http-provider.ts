@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/timeout';
 import {Storage} from '@ionic/storage';
 
 var SERVER_URL = "http://localhost:3000";
-var TOKEN;
 
 @Injectable()
 export class HttpProvider {
@@ -28,7 +28,7 @@ export class HttpProvider {
     headers.append('Authorization', 'Token token='+token);
     headers.append('Content-Type', 'application/json');
 
-    return this.http.get(SERVER_URL+'/sales', opt).map(res => res.json());
+    return this.http.get(SERVER_URL+'/sales', opt).timeout(10000).map(res => res.json());
   }
 
   getData(token, location){
