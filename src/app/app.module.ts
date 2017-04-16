@@ -13,6 +13,8 @@ import { Login } from '../pages/login/login';
 import { Services } from '../pages/services/services';
 import { SaleDetails } from '../pages/sale-details/sale-details';
 import { Cash } from '../pages/cash/cash';
+import { Invoices } from '../pages/invoices/invoices';
+import { InvoiceDetails } from '../pages/invoice-details/invoice-details';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { Cash } from '../pages/cash/cash';
     Login,
     Services,
     SaleDetails,
-    Cash
+    Cash,
+    Invoices,
+    InvoiceDetails,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,9 @@ import { Cash } from '../pages/cash/cash';
     Login,
     Services,
     SaleDetails,
-    Cash
+    Cash,
+    Invoices,
+    InvoiceDetails,
   ],
   providers: [
     StatusBar,

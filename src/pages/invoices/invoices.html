@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="primary" align-title="center">
+    <ion-title center-text>
+      Facturas
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content>
+<ion-list>
+  <ion-item ion-item *ngFor="let item of list">
+    <h2> <strong>Cliente: </strong> {{item.client}}</h2>
+    <p>
+      <strong>Vendedor: </strong>{{item.seller}} <br> 
+      <strong>Total: </strong> ${{item.total}}
+    </p>
+    <button ion-button clear item-right (click)="invoiceDetails(item.id)">Ver</button>
+  </ion-item>
+</ion-list>
+</ion-content>

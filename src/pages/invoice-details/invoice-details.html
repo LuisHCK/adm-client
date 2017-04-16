@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar color="dark-blue" align-title="center">
+    <ion-title center-text>
+      Detalles Factura
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="dark-blue" inset>
+
+    <div class="white-text">
+      <p center text-center class="white-text day-title">
+        <b>Factura #{{details?.code}}</b>
+      </p>
+    </div>
+    
+    <hr>
+    
+    <div class="white-text center-items">
+      <b>CLIENTE:</b>
+      <h3>{{details?.client}}</h3>
+    </div>
+    <ion-grid class="center-items">
+      <ion-row>
+
+        <ion-col col-6>
+          <div class="white-text">
+            <h3>TOTAL</h3>
+            <span item-right class="total-invoice">${{ details?.total }}</span>
+          </div>
+        </ion-col>
+
+        <ion-col col-6>
+          <div class="white-text">
+            <h3>FECHA</h3>
+            <span item-right>{{ details?.date_charged|date: 'dd/MM/yyyy h:mm' }}</span>
+          </div>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+
+  </div>
+
+  <div>
+    <p text-center class="light-text">TRANSACCIONES</p>
+
+    <ion-list class="light-text-list">
+      <ion-list-header class="header">
+        Artículos
+      </ion-list-header>
+      <ion-item>
+        <ion-icon name="basket" item-left></ion-icon>
+        <b>Productos: </b>{{ details?.products }}
+      </ion-item>
+      <ion-item>
+        <ion-icon name="build" item-left></ion-icon>
+        <b>Servicios: </b>{{ details?.services }}
+      </ion-item>
+
+      <ion-list-header class="header">
+        Transacción
+      </ion-list-header>
+      <ion-item>
+        <ion-icon name="calendar" item-left></ion-icon>
+        <b>Apertura: </b>{{ details?.date_open|date: 'dd/MM/yyyy h:mm' }}
+      </ion-item>
+      <ion-item>
+        <ion-icon name="contact" item-left></ion-icon>
+        <b>Vendedor: </b>{{ details?.seller }}
+      </ion-item>
+    </ion-list>
+
+  </div>
+</ion-content>
