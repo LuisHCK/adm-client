@@ -1,7 +1,8 @@
 {
-  "name": "ionic-hello-world",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "name": "administra",
+  "version": "0.0.1",
+  "author": "Living Company",
+  "homepage": "https://luishck.github.io",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
@@ -41,5 +42,5 @@
     "ionic-plugin-keyboard"
   ],
   "cordovaPlatforms": [],
-  "description": "adm-client: An Ionic project"
+  "description": "Administra Mobile: Monitorea en tiempo real la actidad de tu negocio"
 }

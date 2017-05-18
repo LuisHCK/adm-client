@@ -19,14 +19,12 @@
     <img src="assets/logo.gif" style="max-width:150px;">
 </div>
     <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
-        <ion-list>
+        <div padding>
             <ion-item>
                 <ion-label floating>Código de Acceso</ion-label>
                 <ion-input type="text" formControlName="token" name="token"></ion-input>
             </ion-item>
-        </ion-list>
-        <button ion-button block>
-                <ion-icon name="key"></ion-icon>Iniciar
-            </button>
+        </div>
+        <button ion-button block large>Iniciar</button>
     </form>
 </ion-content>
